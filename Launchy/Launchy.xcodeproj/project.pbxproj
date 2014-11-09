@@ -14,6 +14,7 @@
 		43ED613E1A0E6D2F00071270 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43ED613C1A0E6D2F00071270 /* LaunchScreen.xib */; };
 		43ED614A1A0E6D2F00071270 /* LaunchyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61491A0E6D2F00071270 /* LaunchyTests.swift */; };
 		43ED61551A0E6E0A00071270 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61541A0E6E0A00071270 /* KeychainService.swift */; };
+		43ED61571A0E746100071270 /* KeyChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61561A0E746100071270 /* KeyChainTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		43ED61491A0E6D2F00071270 /* LaunchyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchyTests.swift; sourceTree = "<group>"; };
 		43ED61531A0E6DF600071270 /* clientCert.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = clientCert.p12; sourceTree = "<group>"; };
 		43ED61541A0E6E0A00071270 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		43ED61561A0E746100071270 /* KeyChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				43ED61491A0E6D2F00071270 /* LaunchyTests.swift */,
 				43ED61471A0E6D2F00071270 /* Supporting Files */,
+				43ED61561A0E746100071270 /* KeyChainTests.swift */,
 			);
 			path = LaunchyTests;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43ED614A1A0E6D2F00071270 /* LaunchyTests.swift in Sources */,
+				43ED61571A0E746100071270 /* KeyChainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
