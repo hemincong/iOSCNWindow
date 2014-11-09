@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43DBC7751A0F577C001FCFE1 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DBC7741A0F577C001FCFE1 /* NetworkExtension.framework */; };
 		43ED61341A0E6D2F00071270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61331A0E6D2F00071270 /* AppDelegate.swift */; };
 		43ED61361A0E6D2F00071270 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61351A0E6D2F00071270 /* ViewController.swift */; };
 		43ED61391A0E6D2F00071270 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43ED61371A0E6D2F00071270 /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43DBC7731A0F5503001FCFE1 /* Launchy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Launchy.entitlements; sourceTree = "<group>"; };
+		43DBC7741A0F577C001FCFE1 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		43ED612E1A0E6D2F00071270 /* Launchy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Launchy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43ED61321A0E6D2F00071270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43ED61331A0E6D2F00071270 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43DBC7751A0F577C001FCFE1 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +68,7 @@
 		43ED61251A0E6D2F00071270 = {
 			isa = PBXGroup;
 			children = (
+				43DBC7741A0F577C001FCFE1 /* NetworkExtension.framework */,
 				43ED61301A0E6D2F00071270 /* Launchy */,
 				43ED61461A0E6D2F00071270 /* LaunchyTests */,
 				43ED612F1A0E6D2F00071270 /* Products */,
@@ -82,6 +87,7 @@
 		43ED61301A0E6D2F00071270 /* Launchy */ = {
 			isa = PBXGroup;
 			children = (
+				43DBC7731A0F5503001FCFE1 /* Launchy.entitlements */,
 				43ED61541A0E6E0A00071270 /* KeychainService.swift */,
 				43ED61331A0E6D2F00071270 /* AppDelegate.swift */,
 				43ED61351A0E6D2F00071270 /* ViewController.swift */,
@@ -170,6 +176,11 @@
 					43ED612D1A0E6D2F00071270 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = ZKUTXPHP95;
+						SystemCapabilities = {
+							com.apple.VPNLite = {
+								enabled = 1;
+							};
+						};
 					};
 					43ED61421A0E6D2F00071270 = {
 						CreatedOnToolsVersion = 6.1;
@@ -347,10 +358,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Launchy/Launchy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Launchy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -358,10 +372,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Launchy/Launchy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Launchy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -418,6 +435,7 @@
 				43ED614F1A0E6D2F00071270 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43ED61501A0E6D2F00071270 /* Build configuration list for PBXNativeTarget "LaunchyTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +444,7 @@
 				43ED61521A0E6D2F00071270 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
