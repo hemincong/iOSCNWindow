@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		437A44201A6AB739007A8FCE /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DBC7741A0F577C001FCFE1 /* NetworkExtension.framework */; };
+		43BCC2A11A73DC4F00E4FB73 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCC2A01A73DC4F00E4FB73 /* KeychainWrapper.swift */; };
+		43BCC2A21A73DE5800E4FB73 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCC2A01A73DC4F00E4FB73 /* KeychainWrapper.swift */; };
 		43DBC7751A0F577C001FCFE1 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DBC7741A0F577C001FCFE1 /* NetworkExtension.framework */; };
 		43ED61341A0E6D2F00071270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61331A0E6D2F00071270 /* AppDelegate.swift */; };
 		43ED61361A0E6D2F00071270 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61351A0E6D2F00071270 /* ViewController.swift */; };
-		43ED61391A0E6D2F00071270 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43ED61371A0E6D2F00071270 /* Main.storyboard */; };
 		43ED613B1A0E6D2F00071270 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43ED613A1A0E6D2F00071270 /* Images.xcassets */; };
-		43ED613E1A0E6D2F00071270 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43ED613C1A0E6D2F00071270 /* LaunchScreen.xib */; };
 		43ED614A1A0E6D2F00071270 /* LaunchyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61491A0E6D2F00071270 /* LaunchyTests.swift */; };
-		43ED61551A0E6E0A00071270 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61541A0E6E0A00071270 /* KeychainService.swift */; };
 		43ED61571A0E746100071270 /* KeyChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61561A0E746100071270 /* KeyChainTests.swift */; };
+		43FAEE5B1A6AABD500B026E7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FAEE451A6AAADB00B026E7 /* NotificationCenter.framework */; };
+		43FAEE601A6AABD500B026E7 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FAEE5F1A6AABD500B026E7 /* TodayViewController.swift */; };
+		43FAEE621A6AABD500B026E7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43FAEE611A6AABD500B026E7 /* MainInterface.storyboard */; };
+		43FAEE651A6AABD500B026E7 /* VPNSwitcher.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 43FAEE5A1A6AABD500B026E7 /* VPNSwitcher.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +30,32 @@
 			remoteGlobalIDString = 43ED612D1A0E6D2F00071270;
 			remoteInfo = Launchy;
 		};
+		43FAEE631A6AABD500B026E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43ED61261A0E6D2F00071270 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43FAEE591A6AABD500B026E7;
+			remoteInfo = VPNSwitcher;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		43FAEE511A6AAADB00B026E7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				43FAEE651A6AABD500B026E7 /* VPNSwitcher.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4372FD7A1A6BF5010050F433 /* VPNSwitcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VPNSwitcher.entitlements; sourceTree = "<group>"; };
+		43BCC2A01A73DC4F00E4FB73 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		43DBC7731A0F5503001FCFE1 /* Launchy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Launchy.entitlements; sourceTree = "<group>"; };
 		43DBC7741A0F577C001FCFE1 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		43ED612E1A0E6D2F00071270 /* Launchy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Launchy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,9 +68,12 @@
 		43ED61431A0E6D2F00071270 /* LaunchyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaunchyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43ED61481A0E6D2F00071270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43ED61491A0E6D2F00071270 /* LaunchyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchyTests.swift; sourceTree = "<group>"; };
-		43ED61531A0E6DF600071270 /* clientCert.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = clientCert.p12; sourceTree = "<group>"; };
-		43ED61541A0E6E0A00071270 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		43ED61561A0E746100071270 /* KeyChainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainTests.swift; sourceTree = "<group>"; };
+		43FAEE451A6AAADB00B026E7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		43FAEE5A1A6AABD500B026E7 /* VPNSwitcher.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VPNSwitcher.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		43FAEE5E1A6AABD500B026E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43FAEE5F1A6AABD500B026E7 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		43FAEE611A6AABD500B026E7 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +92,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43FAEE571A6AABD500B026E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				437A44201A6AB739007A8FCE /* NetworkExtension.framework in Frameworks */,
+				43FAEE5B1A6AABD500B026E7 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		43ED61251A0E6D2F00071270 = {
 			isa = PBXGroup;
 			children = (
-				43DBC7741A0F577C001FCFE1 /* NetworkExtension.framework */,
 				43ED61301A0E6D2F00071270 /* Launchy */,
 				43ED61461A0E6D2F00071270 /* LaunchyTests */,
+				43FAEE5C1A6AABD500B026E7 /* VPNSwitcher */,
+				43FAEE441A6AAADB00B026E7 /* Frameworks */,
 				43ED612F1A0E6D2F00071270 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +120,7 @@
 			children = (
 				43ED612E1A0E6D2F00071270 /* Launchy.app */,
 				43ED61431A0E6D2F00071270 /* LaunchyTests.xctest */,
+				43FAEE5A1A6AABD500B026E7 /* VPNSwitcher.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,8 +128,8 @@
 		43ED61301A0E6D2F00071270 /* Launchy */ = {
 			isa = PBXGroup;
 			children = (
+				43BCC2A01A73DC4F00E4FB73 /* KeychainWrapper.swift */,
 				43DBC7731A0F5503001FCFE1 /* Launchy.entitlements */,
-				43ED61541A0E6E0A00071270 /* KeychainService.swift */,
 				43ED61331A0E6D2F00071270 /* AppDelegate.swift */,
 				43ED61351A0E6D2F00071270 /* ViewController.swift */,
 				43ED61371A0E6D2F00071270 /* Main.storyboard */,
@@ -102,7 +143,6 @@
 		43ED61311A0E6D2F00071270 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				43ED61531A0E6DF600071270 /* clientCert.p12 */,
 				43ED61321A0E6D2F00071270 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -126,6 +166,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		43FAEE441A6AAADB00B026E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43DBC7741A0F577C001FCFE1 /* NetworkExtension.framework */,
+				43FAEE451A6AAADB00B026E7 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43FAEE5C1A6AABD500B026E7 /* VPNSwitcher */ = {
+			isa = PBXGroup;
+			children = (
+				4372FD7A1A6BF5010050F433 /* VPNSwitcher.entitlements */,
+				43FAEE5F1A6AABD500B026E7 /* TodayViewController.swift */,
+				43FAEE611A6AABD500B026E7 /* MainInterface.storyboard */,
+				43FAEE5D1A6AABD500B026E7 /* Supporting Files */,
+			);
+			path = VPNSwitcher;
+			sourceTree = "<group>";
+		};
+		43FAEE5D1A6AABD500B026E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43FAEE5E1A6AABD500B026E7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,10 +204,12 @@
 				43ED612A1A0E6D2F00071270 /* Sources */,
 				43ED612B1A0E6D2F00071270 /* Frameworks */,
 				43ED612C1A0E6D2F00071270 /* Resources */,
+				43FAEE511A6AAADB00B026E7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				43FAEE641A6AABD500B026E7 /* PBXTargetDependency */,
 			);
 			name = Launchy;
 			productName = Launchy;
@@ -164,6 +234,23 @@
 			productReference = 43ED61431A0E6D2F00071270 /* LaunchyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		43FAEE591A6AABD500B026E7 /* VPNSwitcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43FAEE661A6AABD500B026E7 /* Build configuration list for PBXNativeTarget "VPNSwitcher" */;
+			buildPhases = (
+				43FAEE561A6AABD500B026E7 /* Sources */,
+				43FAEE571A6AABD500B026E7 /* Frameworks */,
+				43FAEE581A6AABD500B026E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VPNSwitcher;
+			productName = VPNSwitcher;
+			productReference = 43FAEE5A1A6AABD500B026E7 /* VPNSwitcher.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -186,6 +273,10 @@
 						CreatedOnToolsVersion = 6.1;
 						TestTargetID = 43ED612D1A0E6D2F00071270;
 					};
+					43FAEE591A6AABD500B026E7 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = ZKUTXPHP95;
+					};
 				};
 			};
 			buildConfigurationList = 43ED61291A0E6D2F00071270 /* Build configuration list for PBXProject "Launchy" */;
@@ -203,6 +294,7 @@
 			targets = (
 				43ED612D1A0E6D2F00071270 /* Launchy */,
 				43ED61421A0E6D2F00071270 /* LaunchyTests */,
+				43FAEE591A6AABD500B026E7 /* VPNSwitcher */,
 			);
 		};
 /* End PBXProject section */
@@ -212,8 +304,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43ED61391A0E6D2F00071270 /* Main.storyboard in Resources */,
-				43ED613E1A0E6D2F00071270 /* LaunchScreen.xib in Resources */,
 				43ED613B1A0E6D2F00071270 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +315,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43FAEE581A6AABD500B026E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43FAEE621A6AABD500B026E7 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -232,9 +330,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BCC2A11A73DC4F00E4FB73 /* KeychainWrapper.swift in Sources */,
 				43ED61361A0E6D2F00071270 /* ViewController.swift in Sources */,
 				43ED61341A0E6D2F00071270 /* AppDelegate.swift in Sources */,
-				43ED61551A0E6E0A00071270 /* KeychainService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +345,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43FAEE561A6AABD500B026E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43BCC2A21A73DE5800E4FB73 /* KeychainWrapper.swift in Sources */,
+				43FAEE601A6AABD500B026E7 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -254,6 +361,11 @@
 			isa = PBXTargetDependency;
 			target = 43ED612D1A0E6D2F00071270 /* Launchy */;
 			targetProxy = 43ED61441A0E6D2F00071270 /* PBXContainerItemProxy */;
+		};
+		43FAEE641A6AABD500B026E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43FAEE591A6AABD500B026E7 /* VPNSwitcher */;
+			targetProxy = 43FAEE631A6AABD500B026E7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -361,6 +473,7 @@
 				CODE_SIGN_ENTITLEMENTS = Launchy/Launchy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Launchy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -375,6 +488,7 @@
 				CODE_SIGN_ENTITLEMENTS = Launchy/Launchy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Launchy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +530,38 @@
 			};
 			name = Release;
 		};
+		43FAEE671A6AABD500B026E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VPNSwitcher/VPNSwitcher.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VPNSwitcher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		43FAEE681A6AABD500B026E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VPNSwitcher/VPNSwitcher.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = VPNSwitcher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -442,6 +588,15 @@
 			buildConfigurations = (
 				43ED61511A0E6D2F00071270 /* Debug */,
 				43ED61521A0E6D2F00071270 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43FAEE661A6AABD500B026E7 /* Build configuration list for PBXNativeTarget "VPNSwitcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43FAEE671A6AABD500B026E7 /* Debug */,
+				43FAEE681A6AABD500B026E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
