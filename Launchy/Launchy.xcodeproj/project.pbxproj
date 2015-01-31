@@ -264,6 +264,9 @@
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = ZKUTXPHP95;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.VPNLite = {
 								enabled = 1;
 							};
@@ -276,6 +279,11 @@
 					43FAEE591A6AABD500B026E7 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = ZKUTXPHP95;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
