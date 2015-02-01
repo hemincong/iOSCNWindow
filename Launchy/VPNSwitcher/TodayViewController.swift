@@ -8,23 +8,24 @@
 
 import UIKit
 import NotificationCenter
-
 import NetworkExtension
 
 let kKeychainServiceName = "VPNSwither";
 
-class TodayViewController: UIViewController, NCWidgetProviding {
+class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDelegate,UITableViewDataSource
+{
+    @IBOutlet weak var tableView : UITableView!
+    var items: [String] = ["We", "hhaha", "asdfasdfas"]
     
-    @IBOutlet weak var button : UIButton!
-    
-    @IBAction func ButtonTap(AnyObject) {
-        initVPN();
+    @IBAction func disconnectBtnTap(AnyObject) {
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-          preferredContentSize = CGSizeMake(0, 50)
+        
         // Do any additional setup after loading the view from its nib.
+        preferredContentSize = CGSizeMake(0, 200)
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,14 +35,48 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
         // Perform any setup necessary in order to update the view.
-
+        
         // If an error is encountered, use NCUpdateResult.Failed
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
-
+        
         completionHandler(NCUpdateResult.NewData)
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count;
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        //var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("SwitcherCell") as UITableViewCell
+        //if (cell == nil) {
+        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
+        cell.textLabel?.text = self.items[indexPath.row]
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 50
+    }
+    
+    var lastIndexPath: NSIndexPath!
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        println("You selected cell #\(indexPath.row)!")
+        
+        if (self.lastIndexPath != nil) {
+            var oldCell = tableView.cellForRowAtIndexPath(lastIndexPath)
+            oldCell!.accessoryType = UITableViewCellAccessoryType.None
+        }
+        
+        var newCell = tableView.cellForRowAtIndexPath(indexPath)
+        newCell!.accessoryType = UITableViewCellAccessoryType.Checkmark
+        self.lastIndexPath = indexPath
+    }
     
     func initVPN() {
         let vpn_manager = NEVPNManager.sharedManager();
@@ -87,8 +122,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         vpn_manager.loadFromPreferencesWithCompletionHandler(loadPreferenceHandler);
         
-        
-        
         var ruleList:[NEOnDemandRule] = [];
         ruleList.append(NEOnDemandRuleConnect());
         if vpn_manager != nil {
@@ -107,6 +140,4 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             println("connect success");
         }
     }
-
-    
 }
