@@ -27,3 +27,6 @@ DerivedData
 
 # for my certicate
 *.p12
+
+# for AppCode
+.idea
