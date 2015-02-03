@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4303C4891A7FDCF500C2DC43 /* VPNManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303C4881A7FDCF500C2DC43 /* VPNManagerHelper.swift */; };
+		4303C48A1A7FDCFC00C2DC43 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FAEE5F1A6AABD500B026E7 /* TodayViewController.swift */; };
+		4303C4A81A7FE0F400C2DC43 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCC2A01A73DC4F00E4FB73 /* KeychainWrapper.swift */; };
+		4303C4AE1A81253900C2DC43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4303C4AD1A81253900C2DC43 /* Main.storyboard */; };
 		437A44201A6AB739007A8FCE /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DBC7741A0F577C001FCFE1 /* NetworkExtension.framework */; };
 		43BCC2A11A73DC4F00E4FB73 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCC2A01A73DC4F00E4FB73 /* KeychainWrapper.swift */; };
-		43BCC2A21A73DE5800E4FB73 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCC2A01A73DC4F00E4FB73 /* KeychainWrapper.swift */; };
 		43DBC7751A0F577C001FCFE1 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DBC7741A0F577C001FCFE1 /* NetworkExtension.framework */; };
 		43ED61341A0E6D2F00071270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61331A0E6D2F00071270 /* AppDelegate.swift */; };
 		43ED61361A0E6D2F00071270 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61351A0E6D2F00071270 /* ViewController.swift */; };
@@ -17,7 +20,6 @@
 		43ED614A1A0E6D2F00071270 /* LaunchyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61491A0E6D2F00071270 /* LaunchyTests.swift */; };
 		43ED61571A0E746100071270 /* KeyChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED61561A0E746100071270 /* KeyChainTests.swift */; };
 		43FAEE5B1A6AABD500B026E7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FAEE451A6AAADB00B026E7 /* NotificationCenter.framework */; };
-		43FAEE601A6AABD500B026E7 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FAEE5F1A6AABD500B026E7 /* TodayViewController.swift */; };
 		43FAEE621A6AABD500B026E7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43FAEE611A6AABD500B026E7 /* MainInterface.storyboard */; };
 		43FAEE651A6AABD500B026E7 /* VPNSwitcher.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 43FAEE5A1A6AABD500B026E7 /* VPNSwitcher.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4303C4881A7FDCF500C2DC43 /* VPNManagerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPNManagerHelper.swift; sourceTree = "<group>"; };
+		4303C4AD1A81253900C2DC43 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4372FD7A1A6BF5010050F433 /* VPNSwitcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VPNSwitcher.entitlements; sourceTree = "<group>"; };
 		43BCC2A01A73DC4F00E4FB73 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		43DBC7731A0F5503001FCFE1 /* Launchy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Launchy.entitlements; sourceTree = "<group>"; };
@@ -62,7 +66,6 @@
 		43ED61321A0E6D2F00071270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43ED61331A0E6D2F00071270 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43ED61351A0E6D2F00071270 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		43ED61381A0E6D2F00071270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43ED613A1A0E6D2F00071270 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43ED613D1A0E6D2F00071270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		43ED61431A0E6D2F00071270 /* LaunchyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaunchyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,10 +135,10 @@
 				43DBC7731A0F5503001FCFE1 /* Launchy.entitlements */,
 				43ED61331A0E6D2F00071270 /* AppDelegate.swift */,
 				43ED61351A0E6D2F00071270 /* ViewController.swift */,
-				43ED61371A0E6D2F00071270 /* Main.storyboard */,
 				43ED613A1A0E6D2F00071270 /* Images.xcassets */,
 				43ED613C1A0E6D2F00071270 /* LaunchScreen.xib */,
 				43ED61311A0E6D2F00071270 /* Supporting Files */,
+				4303C4AD1A81253900C2DC43 /* Main.storyboard */,
 			);
 			path = Launchy;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 		43FAEE5C1A6AABD500B026E7 /* VPNSwitcher */ = {
 			isa = PBXGroup;
 			children = (
+				4303C4881A7FDCF500C2DC43 /* VPNManagerHelper.swift */,
 				4372FD7A1A6BF5010050F433 /* VPNSwitcher.entitlements */,
 				43FAEE5F1A6AABD500B026E7 /* TodayViewController.swift */,
 				43FAEE611A6AABD500B026E7 /* MainInterface.storyboard */,
@@ -313,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43ED613B1A0E6D2F00071270 /* Images.xcassets in Resources */,
+				4303C4AE1A81253900C2DC43 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,8 +362,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43BCC2A21A73DE5800E4FB73 /* KeychainWrapper.swift in Sources */,
-				43FAEE601A6AABD500B026E7 /* TodayViewController.swift in Sources */,
+				4303C4A81A7FE0F400C2DC43 /* KeychainWrapper.swift in Sources */,
+				4303C48A1A7FDCFC00C2DC43 /* TodayViewController.swift in Sources */,
+				4303C4891A7FDCF500C2DC43 /* VPNManagerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,14 +384,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		43ED61371A0E6D2F00071270 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43ED61381A0E6D2F00071270 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		43ED613C1A0E6D2F00071270 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
