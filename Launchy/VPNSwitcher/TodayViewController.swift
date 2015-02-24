@@ -14,7 +14,7 @@ let kKeychainServiceName = "VPNSwither";
 class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDelegate,UITableViewDataSource
 {
     @IBOutlet weak var tableView : UITableView!
-    var items: [String] = ["We", "hhaha", "asdfasdfas"]
+    var items: [VPNProfile] = [VPNProfile]()
     let vpn_helper = VPNManagerHelper()
     
     @IBAction func disconnectBtnTap(AnyObject) {
@@ -27,6 +27,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
         // Do any additional setup after loading the view from its nib.
         preferredContentSize = CGSizeMake(0, 200)
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
+        items = VPNProfileManager.sharedManager.getAllVPNProfile()
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,10 +52,9 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("SwitcherCell") as UITableViewCell
-        //if (cell == nil) {
+        
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
-        cell.textLabel?.text = self.items[indexPath.row]
+        cell.textLabel?.text = self.items[indexPath.row].title
         return cell
     }
     
