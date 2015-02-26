@@ -19,9 +19,6 @@ class MasterViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
-        
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,4 +74,3 @@ class MasterViewController: UIViewController {
         self.lastIndexPath = indexPath
     }
 }
-
