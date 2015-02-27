@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pn4-Ps-Ncb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -89,7 +90,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gi6-7c-Zmu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Server Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gi6-7c-Zmu">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -100,7 +101,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fcp-HT-Oue">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fcp-HT-Oue">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -126,12 +127,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R67-qC-mBu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Shared Secret" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R67-qC-mBu">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="isE-6G-oLr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="isE-6G-oLr">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -198,8 +199,21 @@
                                 <exclude reference="KI9-gf-7fh"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="CGD-v4-xbc"/>
+                                <exclude reference="Cva-8w-ohd"/>
+                                <exclude reference="ylZ-zR-4pf"/>
+                                <exclude reference="40o-wc-E9c"/>
+                                <exclude reference="EsX-fs-1T5"/>
+                                <exclude reference="VRh-vU-TjY"/>
+                                <exclude reference="b2V-Oa-YoF"/>
+                                <exclude reference="nrM-l9-yhR"/>
                                 <exclude reference="Jbi-gM-IjQ"/>
                                 <exclude reference="Ved-gy-q3J"/>
+                                <exclude reference="Vcd-eu-T23"/>
+                                <exclude reference="g4g-Pl-tss"/>
+                                <exclude reference="voh-xV-r24"/>
+                                <exclude reference="Yc9-ve-f8f"/>
+                                <exclude reference="auc-5o-vIH"/>
                                 <exclude reference="Lsn-Eb-9h7"/>
                                 <exclude reference="WHh-7U-3ck"/>
                                 <exclude reference="dD5-Kq-Bym"/>
@@ -209,25 +223,12 @@
                                 <exclude reference="Jgo-d4-GVY"/>
                                 <exclude reference="LVn-oB-vZm"/>
                                 <exclude reference="YcJ-NH-phR"/>
-                                <exclude reference="CGD-v4-xbc"/>
-                                <exclude reference="Cva-8w-ohd"/>
-                                <exclude reference="ylZ-zR-4pf"/>
                                 <exclude reference="1fY-m3-XkP"/>
                                 <exclude reference="2cd-GY-WlC"/>
                                 <exclude reference="D1Q-DG-W3W"/>
                                 <exclude reference="cnG-oF-ga0"/>
                                 <exclude reference="kk6-sb-7Em"/>
                                 <exclude reference="xXQ-v7-J0V"/>
-                                <exclude reference="40o-wc-E9c"/>
-                                <exclude reference="EsX-fs-1T5"/>
-                                <exclude reference="VRh-vU-TjY"/>
-                                <exclude reference="b2V-Oa-YoF"/>
-                                <exclude reference="nrM-l9-yhR"/>
-                                <exclude reference="Yc9-ve-f8f"/>
-                                <exclude reference="auc-5o-vIH"/>
-                                <exclude reference="Vcd-eu-T23"/>
-                                <exclude reference="g4g-Pl-tss"/>
-                                <exclude reference="voh-xV-r24"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -244,8 +245,21 @@
                                 <include reference="KI9-gf-7fh"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="CGD-v4-xbc"/>
+                                <include reference="Cva-8w-ohd"/>
+                                <include reference="ylZ-zR-4pf"/>
+                                <include reference="40o-wc-E9c"/>
+                                <include reference="EsX-fs-1T5"/>
+                                <include reference="VRh-vU-TjY"/>
+                                <include reference="b2V-Oa-YoF"/>
+                                <include reference="nrM-l9-yhR"/>
                                 <include reference="Jbi-gM-IjQ"/>
                                 <include reference="Ved-gy-q3J"/>
+                                <include reference="Vcd-eu-T23"/>
+                                <include reference="g4g-Pl-tss"/>
+                                <include reference="voh-xV-r24"/>
+                                <exclude reference="Yc9-ve-f8f"/>
+                                <include reference="auc-5o-vIH"/>
                                 <include reference="Lsn-Eb-9h7"/>
                                 <include reference="WHh-7U-3ck"/>
                                 <include reference="dD5-Kq-Bym"/>
@@ -255,25 +269,12 @@
                                 <include reference="Jgo-d4-GVY"/>
                                 <include reference="LVn-oB-vZm"/>
                                 <include reference="YcJ-NH-phR"/>
-                                <include reference="CGD-v4-xbc"/>
-                                <include reference="Cva-8w-ohd"/>
-                                <include reference="ylZ-zR-4pf"/>
                                 <include reference="1fY-m3-XkP"/>
                                 <include reference="2cd-GY-WlC"/>
                                 <include reference="D1Q-DG-W3W"/>
                                 <include reference="cnG-oF-ga0"/>
                                 <include reference="kk6-sb-7Em"/>
                                 <include reference="xXQ-v7-J0V"/>
-                                <include reference="40o-wc-E9c"/>
-                                <include reference="EsX-fs-1T5"/>
-                                <include reference="VRh-vU-TjY"/>
-                                <include reference="b2V-Oa-YoF"/>
-                                <include reference="nrM-l9-yhR"/>
-                                <exclude reference="Yc9-ve-f8f"/>
-                                <include reference="auc-5o-vIH"/>
-                                <include reference="Vcd-eu-T23"/>
-                                <include reference="g4g-Pl-tss"/>
-                                <include reference="voh-xV-r24"/>
                             </mask>
                         </variation>
                     </view>
@@ -281,6 +282,13 @@
                     <navigationItem key="navigationItem" title="Detail" id="2Ar-4W-v25">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="aDQ-B4-e2H"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="accountNameTF" destination="Fcp-HT-Oue" id="XpW-Hs-deu"/>
+                        <outlet property="passwordTF" destination="E1f-wV-qGY" id="UnE-Qo-Qlp"/>
+                        <outlet property="serverAddressTF" destination="Gi6-7c-Zmu" id="wLd-nd-G4Q"/>
+                        <outlet property="sharedSecretTF" destination="R67-qC-mBu" id="w9g-xF-wNI"/>
+                        <outlet property="titleTF" destination="isE-6G-oLr" id="Qg9-Y0-ziA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rot-Px-bxL" sceneMemberID="firstResponder"/>
             </objects>

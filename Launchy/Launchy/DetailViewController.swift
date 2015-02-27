@@ -9,6 +9,11 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    @IBOutlet weak var titleTF : UITextField!
+    @IBOutlet weak var serverAddressTF : UITextField!
+    @IBOutlet weak var sharedSecretTF : UITextField!
+    @IBOutlet weak var passwordTF : UITextField!
+    @IBOutlet weak var accountNameTF : UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +30,7 @@ class DetailViewController: UIViewController {
 
     func done() {
         self.navigationController?.popViewControllerAnimated(false)
-        
+        VPNProfileManager.sharedManager.createVPNProfileAndSave(titleTF.text, serverAddress: serverAddressTF.text, accountName: accountNameTF.text)
     }
     /*
     // MARK: - Navigation
