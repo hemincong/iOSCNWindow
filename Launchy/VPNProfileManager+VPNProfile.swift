@@ -11,6 +11,42 @@ extension VPNProfileManager {
         return NSEntityDescription.insertNewObjectForEntityForName("VPNProfile", inManagedObjectContext: self.managedObjectContext!) as? VPNProfile
     }
 
+    func createVPNProfile(title: String, serverAddress: String, accountName: String) -> VPNProfile? {
+        if let vp = createVPNProfile() {
+            vp.title = title
+            vp.serverAddress = serverAddress
+            vp.accountName = accountName
+            return vp
+        }
+        return nil
+    }
+
+    func createVPNProfileAndSave(title: String, serverAddress: String, accountName: String) -> Bool {
+        if let vp = createVPNProfile(title, serverAddress: serverAddress, accountName: accountName) {
+            var error: NSError?
+            if !self.managedObjectContext!.save(&error) {
+                println("Could not save \(error), \(error?.userInfo)")
+                return false
+            } else {
+                self.saveContext()
+
+                if !vp.objectID.temporaryID {
+
+                    //VPNKeychainWrapper.setPassword(password, andSecret: password, forVPNID: vpn.ID)
+                    /*
+                    if allVPN().count == 0 {
+                        VPNManager.sharedManager().activatedVPNDict = vpn.toDictionary()
+                    }
+                    */
+
+                    println("New VPN saved.")
+                }
+                return true
+            }
+        }
+        return false
+    }
+
     func getAllVPNProfile() -> [VPNProfile] {
         var profiles = [VPNProfile]()
 
