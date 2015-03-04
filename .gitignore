@@ -24,9 +24,3 @@ DerivedData
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
 #
 # Pods/
-
-# for my certicate
-*.p12
-
-# for AppCode
-.idea
