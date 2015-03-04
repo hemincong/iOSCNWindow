@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3F70D08D07FAE7F6FF9011B8 /* VPNProfileManager+VPNProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F70DC00C34254F23CACE16E /* VPNProfileManager+VPNProfile.swift */; };
+		3F70D2052FDBFB98C14987F4 /* KeyChainWrapper+VPNProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F70D62D3A810C72EA54D9B8 /* KeyChainWrapper+VPNProfile.swift */; };
+		3F70DD4C5D284ED3C3EDB288 /* KeyChainWrapper+VPNProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F70D62D3A810C72EA54D9B8 /* KeyChainWrapper+VPNProfile.swift */; };
 		3F70DFDB3162E8C7503A5FEC /* VPNProfileManager+VPNProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F70DC00C34254F23CACE16E /* VPNProfileManager+VPNProfile.swift */; };
 		4303C4891A7FDCF500C2DC43 /* VPNManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303C4881A7FDCF500C2DC43 /* VPNManagerHelper.swift */; };
 		4303C48A1A7FDCFC00C2DC43 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FAEE5F1A6AABD500B026E7 /* TodayViewController.swift */; };
@@ -104,6 +106,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F70D62D3A810C72EA54D9B8 /* KeyChainWrapper+VPNProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "KeyChainWrapper+VPNProfile.swift"; path = "Launchy/KeyChainWrapper+VPNProfile.swift"; sourceTree = "<group>"; };
 		3F70DC00C34254F23CACE16E /* VPNProfileManager+VPNProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VPNProfileManager+VPNProfile.swift"; sourceTree = "<group>"; };
 		4303C4881A7FDCF500C2DC43 /* VPNManagerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VPNManagerHelper.swift; path = VPNSwitcher/VPNManagerHelper.swift; sourceTree = "<group>"; };
 		4303C4AD1A81253900C2DC43 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -170,6 +173,7 @@
 				43BCC2A01A73DC4F00E4FB73 /* KeychainWrapper.swift */,
 				4303C4881A7FDCF500C2DC43 /* VPNManagerHelper.swift */,
 				3F70DC00C34254F23CACE16E /* VPNProfileManager+VPNProfile.swift */,
+				3F70D62D3A810C72EA54D9B8 /* KeyChainWrapper+VPNProfile.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -468,6 +472,7 @@
 				43ED61341A0E6D2F00071270 /* AppDelegate.swift in Sources */,
 				3F70D08D07FAE7F6FF9011B8 /* VPNProfileManager+VPNProfile.swift in Sources */,
 				431797611A9E2B7B0067C23A /* DetailViewController.swift in Sources */,
+				3F70DD4C5D284ED3C3EDB288 /* KeyChainWrapper+VPNProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +496,7 @@
 				43C986031A99777E0077E0C6 /* VPNProfileManager.swift in Sources */,
 				4303C4891A7FDCF500C2DC43 /* VPNManagerHelper.swift in Sources */,
 				3F70DFDB3162E8C7503A5FEC /* VPNProfileManager+VPNProfile.swift in Sources */,
+				3F70D2052FDBFB98C14987F4 /* KeyChainWrapper+VPNProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
