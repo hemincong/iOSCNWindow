@@ -9,11 +9,16 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    @IBOutlet weak var titleTF : UITextField!
-    @IBOutlet weak var serverAddressTF : UITextField!
-    @IBOutlet weak var sharedSecretTF : UITextField!
-    @IBOutlet weak var passwordTF : UITextField!
-    @IBOutlet weak var accountNameTF : UITextField!
+
+    @IBOutlet weak var titleTF: UITextField!
+    @IBOutlet weak var serverAddressTF: UITextField!
+    @IBOutlet weak var sharedSecretTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var accountNameTF: UITextField!
+
+    internal var detailItem: VPNProfile? = nil
+
+    private var magicPassword: String? = "9FAs&&^%$#@#vv!czsg"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +27,40 @@ class DetailViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = rightButton
     }
 
+    override func viewWillAppear(animated: Bool) {
+        if let item = detailItem {
+            titleTF.text = item.title
+            serverAddressTF.text = item.serverAddress
+            accountNameTF.text = item.accountName
+            passwordTF.text = magicPassword
+            sharedSecretTF.text = magicPassword
+        }
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     func done() {
+
+        if let vp = VPNProfileManager.sharedManager.createVPNProfileAndSave(titleTF.text, serverAddress: serverAddressTF.text, accountName: accountNameTF.text) {
+
+            if let password = passwordTF.text {
+                if password != magicPassword {
+                    KeychainWrapper.setPassword(password, forVPNProfileID: vp.ID)
+                }
+            }
+
+            if let sercet = sharedSecretTF.text {
+                if sercet != magicPassword {
+                    KeychainWrapper.setSharedSecret(sercet, forVPNProfileID: vp.ID)
+                }
+            }
+        }
+
         self.navigationController?.popViewControllerAnimated(false)
-        VPNProfileManager.sharedManager.createVPNProfileAndSave(titleTF.text, serverAddress: serverAddressTF.text, accountName: accountNameTF.text)
     }
     /*
     // MARK: - Navigation

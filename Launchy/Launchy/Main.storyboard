@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="NP1-Nk-p1p" style="IBUITableViewCellStyleDefault" id="Mhj-72-EDY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="NP1-Nk-p1p" style="IBUITableViewCellStyleDefault" id="Mhj-72-EDY">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mhj-72-EDY" id="fBn-zB-dF0">
@@ -48,7 +48,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="bfw-Ao-cQ2" kind="showDetail" identifier="showDetail" id="GlZ-xR-LbJ"/>
+                                    <segue destination="bfw-Ao-cQ2" kind="show" identifier="edit" id="koF-kd-82B"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -62,11 +62,14 @@
                     <navigationItem key="navigationItem" title="Master" id="RXd-Mc-qU6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Wca-ES-Gs9">
                             <connections>
-                                <segue destination="bfw-Ao-cQ2" kind="show" id="7pt-iP-tWm"/>
+                                <segue destination="bfw-Ao-cQ2" kind="show" identifier="Add" id="JTL-ii-ShV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="C0r-ea-R02" id="en2-1M-kX0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bvb-Gv-U8o" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,7 +130,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Shared Secret" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R67-qC-mBu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Shared Secret" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="R67-qC-mBu">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -296,6 +299,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7pt-iP-tWm"/>
+        <segue reference="JTL-ii-ShV"/>
     </inferredMetricsTieBreakers>
 </document>
