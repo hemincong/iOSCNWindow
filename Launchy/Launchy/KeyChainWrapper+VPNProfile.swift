@@ -21,11 +21,11 @@ extension KeychainWrapper {
             setSharedSecret(sharedSecret, forVPNProfileID: VPNProfileID)
     }
 
-    class func getPassword(VPNProfileID: String) -> String? {
+    class func getPassword(VPNProfileID: String) -> NSData? {
         return KeychainWrapper.dataForKey("\(VPNProfileID)_password")
     }
 
-    class func getSharedSecret(VPNProfileID: String) -> String? {
+    class func getSharedSecret(VPNProfileID: String) -> NSData? {
         return KeychainWrapper.dataForKey("\(VPNProfileID)_sharedSecret")
     }
 }
