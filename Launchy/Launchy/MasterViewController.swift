@@ -19,12 +19,15 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
-        items = VPNProfileManager.sharedManager.getAllVPNProfile()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.items = VPNProfileManager.sharedManager.getAllVPNProfile()
     }
 
     // MARK: - Segues
@@ -32,7 +35,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Edit" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let object = items[indexPath.row]
+                let object = items[indexPath.row] as VPNProfile
                 (segue.destinationViewController as DetailViewController).detailItem = object
             }
         }
