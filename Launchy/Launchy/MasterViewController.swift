@@ -30,7 +30,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "edit" {
+        if segue.identifier == "Edit" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                 let object = items[indexPath.row]
                 (segue.destinationViewController as DetailViewController).detailItem = object
@@ -65,6 +65,6 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         //self.navigationController?.pushViewController(DetailViewController, animated: false)
-        performSegueWithIdentifier("edit", sender: self)
+        performSegueWithIdentifier("Edit", sender: self)
     }
 }
