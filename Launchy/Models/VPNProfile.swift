@@ -16,6 +16,10 @@ class VPNProfile: NSManagedObject {
     @NSManaged var serverAddress: String
     @NSManaged var title: String
 
+    var ID : String {
+        return objectID.URIRepresentation().lastPathComponent!
+    }
+
     class func createInManagedObjectContext(moc: NSManagedObjectContext,
                                             title: String,
                                             serverAddress: String,
