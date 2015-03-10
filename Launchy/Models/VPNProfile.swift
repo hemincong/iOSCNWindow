@@ -12,24 +12,18 @@ import CoreData
 @objc(VPNProfile)
 class VPNProfile: NSManagedObject {
 
-    @NSManaged var accountName: String
-    @NSManaged var serverAddress: String
-    @NSManaged var title: String
+    @NSManaged var accountName: String!
+    @NSManaged var serverAddress: String!
+    @NSManaged var title: String!
 
     var ID : String {
         return objectID.URIRepresentation().lastPathComponent!
     }
 
-    class func createInManagedObjectContext(moc: NSManagedObjectContext,
-                                            title: String,
-                                            serverAddress: String,
-                                            accountName: String) -> VPNProfile? {
-        if let newItem = NSEntityDescription.insertNewObjectForEntityForName("VPNProfile", inManagedObjectContext: moc) as? VPNProfile {
-            newItem.title = title
-            newItem.serverAddress = serverAddress
-            newItem.accountName = accountName
-            return newItem
-        }
-        return nil
+    override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertIntoManagedObjectContext: context)
+        setValue(accountName, forKey: "accountName")
+        setValue(serverAddress, forKey: "serverAddress")
+        setValue(title, forKey: "title")
     }
 }
