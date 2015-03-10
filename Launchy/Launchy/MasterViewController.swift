@@ -49,7 +49,6 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
         cell.textLabel?.text = self.items[indexPath.row].title
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        cell.accessoryView?
         return cell
     }
 
