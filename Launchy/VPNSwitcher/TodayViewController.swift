@@ -26,9 +26,10 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
         
         // Do any additional setup after loading the view from its nib.
         preferredContentSize = CGSizeMake(0, 200)
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-
-        items = VPNProfileManager.sharedManager.getAllVPNProfile()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.items = VPNProfileManager.sharedManager.getAllVPNProfile()
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,7 +53,6 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
         cell.textLabel?.text = self.items[indexPath.row].title
         return cell
