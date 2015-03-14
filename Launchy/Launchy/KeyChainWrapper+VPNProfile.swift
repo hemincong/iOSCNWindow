@@ -7,13 +7,15 @@ import Foundation
 
 extension KeychainWrapper {
     class func setPassword(password: String, forVPNProfileID VPNProfileID: String) -> Bool {
-        KeychainWrapper.removeObjectForKey("\(VPNProfileID)_password")
-        return KeychainWrapper.setString(password, forKey: VPNProfileID)
+        var key = "\(VPNProfileID)_password"
+        KeychainWrapper.removeObjectForKey(key)
+        return KeychainWrapper.setString(password, forKey:key)
     }
 
     class func setSharedSecret(sharedSecret: String, forVPNProfileID VPNProfileID: String) -> Bool {
-        KeychainWrapper.removeObjectForKey("\(VPNProfileID)_sharedSecret")
-        return KeychainWrapper.setString(sharedSecret, forKey: VPNProfileID)
+        var key = "\(VPNProfileID)_sharedSecret"
+        KeychainWrapper.removeObjectForKey(key)
+        return KeychainWrapper.setString(sharedSecret, forKey: key)
     }
 
     class func setPassword(password: String, andSharedSecret sharedSecret: String, forVPNProfileID VPNProfileID: String) -> Bool {
