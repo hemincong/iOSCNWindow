@@ -20,7 +20,7 @@ let SecReturnPersistentRef: String! = kSecReturnPersistentRef as String
 
 class KeychainWrapper {
    private struct internalVars {
-        static var serviceName: String = ""
+        static var serviceName: String = "Launchy"
     }
     
     // MARK: Public Properties
