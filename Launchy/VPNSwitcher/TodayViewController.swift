@@ -15,10 +15,9 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
 {
     @IBOutlet weak var tableView : UITableView!
     var items: [VPNProfile] = [VPNProfile]()
-    let vpn_helper = VPNManagerHelper()
     
     @IBAction func disconnectBtnTap(AnyObject) {
-        vpn_helper.disconnection()
+        VPNManagerHelper.disconnection()
     }
     
     override func viewDidLoad() {

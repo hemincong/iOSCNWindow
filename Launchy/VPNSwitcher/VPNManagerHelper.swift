@@ -73,9 +73,9 @@ public class VPNManagerHelper {
         }
     }
 
-    func disconnection() {
-        if (_vpn_manager != nil) {
-            _vpn_manager.connection.stopVPNTunnel()
+    class func disconnection() {
+        if (NEVPNManager.sharedManager() != nil) {
+            NEVPNManager.sharedManager().connection.stopVPNTunnel()
         }
     }
 }
