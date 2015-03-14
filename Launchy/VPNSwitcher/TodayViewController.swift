@@ -25,9 +25,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
         
         // Do any additional setup after loading the view from its nib.
         preferredContentSize = CGSizeMake(0, 200)
-    }
-    
-    override func viewWillAppear(animated: Bool) {
+
         self.items = VPNProfileManager.sharedManager.getAllVPNProfile()
     }
     
@@ -77,5 +75,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
         var newCell = tableView.cellForRowAtIndexPath(indexPath)
         newCell!.accessoryType = UITableViewCellAccessoryType.Checkmark
         self.lastIndexPath = indexPath
+
+        var vh = VPNManagerHelper(vp: items[indexPath.row] as VPNProfile)
+        vh.initVPN()
     }
 }

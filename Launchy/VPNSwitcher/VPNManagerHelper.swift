@@ -10,7 +10,10 @@ import Foundation
 import NetworkExtension
 
 public class VPNManagerHelper {
+
     let _vpn_manager = NEVPNManager.sharedManager()
+
+    private var vpn_profile: VPNProfile
 
     func savePreferenceHandler(err: NSError?) -> Void {
         if let err = err {
@@ -34,11 +37,13 @@ public class VPNManagerHelper {
             println("\(err)");
         } else {
             let p = NEVPNProtocolIPSec()
-            p.username = "";
-            p.passwordReference = KeychainWrapper.dataForKey("vpn_swither_pwd")
+            println("\(vpn_profile.accountName)");
+            p.username = vpn_profile.accountName;
+            p.passwordReference = KeychainWrapper.getPassword(vpn_profile.ID)!
             p.authenticationMethod = NEVPNIKEAuthenticationMethod.SharedSecret;
-            p.sharedSecretReference = KeychainWrapper.dataForKey("vpn_switcher_secret")
-            p.serverAddress = ""
+            p.sharedSecretReference = KeychainWrapper.getSharedSecret(vpn_profile.ID)!
+            p.serverAddress = vpn_profile.serverAddress
+            println("\(vpn_profile.serverAddress)");
             p.useExtendedAuthentication = true;
             p.disconnectOnSleep = false;
 
@@ -47,6 +52,10 @@ public class VPNManagerHelper {
                 _vpn_manager.saveToPreferencesWithCompletionHandler(savePreferenceHandler);
             }
         }
+    }
+
+    init(vp: VPNProfile) {
+        self.vpn_profile = vp
     }
 
     func initVPN() {
